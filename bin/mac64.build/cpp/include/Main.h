@@ -13,7 +13,6 @@ HX_DECLARE_CLASS1(luxe,Emitter)
 HX_DECLARE_CLASS1(luxe,Entity)
 HX_DECLARE_CLASS1(luxe,Game)
 HX_DECLARE_CLASS1(luxe,KeyEvent)
-HX_DECLARE_CLASS1(luxe,MouseEvent)
 HX_DECLARE_CLASS1(luxe,Objects)
 HX_DECLARE_CLASS1(luxe,Sprite)
 HX_DECLARE_CLASS1(luxe,Visual)
@@ -43,12 +42,14 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::luxe::Game_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Main","\x59","\x64","\x2f","\x33"); }
 
-		::luxe::Sprite block;
+		::luxe::Sprite player;
+		Float move_speed;
 		virtual Dynamic config( Dynamic config);
 
 		virtual Void ready( );
 
-		virtual Void onmousemove( ::luxe::MouseEvent event);
+		virtual Void connect_input( );
+		Dynamic connect_input_dyn();
 
 		virtual Void onkeyup( ::luxe::KeyEvent event);
 

@@ -2584,17 +2584,21 @@
   <file name="src/Main.cpp">
    <depend name="include/Luxe.h"/>
    <depend name="include/Main.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/luxe/Emitter.h"/>
    <depend name="include/luxe/Engine.h"/>
    <depend name="include/luxe/Entity.h"/>
    <depend name="include/luxe/Game.h"/>
+   <depend name="include/luxe/Input.h"/>
    <depend name="include/luxe/KeyEvent.h"/>
-   <depend name="include/luxe/MouseEvent.h"/>
    <depend name="include/luxe/Objects.h"/>
+   <depend name="include/luxe/Resources.h"/>
    <depend name="include/luxe/Screen.h"/>
    <depend name="include/luxe/Sprite.h"/>
    <depend name="include/luxe/Visual.h"/>
-   <depend name="include/phoenix/Color.h"/>
+   <depend name="include/luxe/resource/Resource.h"/>
+   <depend name="include/phoenix/Texture.h"/>
    <depend name="include/phoenix/Vector.h"/>
    <depend name="include/snow/App.h"/>
   </file>
