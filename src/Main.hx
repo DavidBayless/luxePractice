@@ -1,8 +1,12 @@
 
 import luxe.GameConfig;
 import luxe.Input;
+import luxe.Sprite;
+import luxe.Color;
+import luxe.Vector;
 
 class Main extends luxe.Game {
+    var block : Sprite;
 
     override function config(config:GameConfig) {
 
@@ -16,8 +20,17 @@ class Main extends luxe.Game {
     } //config
 
     override function ready() {
-
+      block = new Sprite({
+        name: 'block sprite',
+        pos: Luxe.screen.mid,
+        color: new Color().rgb(0xf94b04),
+        size: new Vector(128, 128)
+      });
     } //ready
+
+    override function onmousemove(event:MouseEvent) {
+      block.pos = event.pos;
+    } //onmousemove
 
     override function onkeyup(event:KeyEvent) {
 
@@ -28,7 +41,7 @@ class Main extends luxe.Game {
     } //onkeyup
 
     override function update(delta:Float) {
-
+      block.rotation_z += 40 * delta;
     } //update
 
 } //Main
