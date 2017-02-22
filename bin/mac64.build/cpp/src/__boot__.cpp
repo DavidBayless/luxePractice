@@ -27,6 +27,9 @@
 #ifndef INCLUDED_luxe_structural_BalancedBSTTraverseMethod
 #include <luxe/structural/BalancedBSTTraverseMethod.h>
 #endif
+#ifndef INCLUDED_luxe_components_sprite_SpriteAnimationType
+#include <luxe/components/sprite/SpriteAnimationType.h>
+#endif
 #ifndef INCLUDED_luxe_DebugError
 #include <luxe/DebugError.h>
 #endif
@@ -209,6 +212,9 @@
 #endif
 #ifndef INCLUDED_luxe_debug_ProfilerDebugView
 #include <luxe/debug/ProfilerDebugView.h>
+#endif
+#ifndef INCLUDED_luxe_components_sprite_SpriteAnimationData
+#include <luxe/components/sprite/SpriteAnimationData.h>
 #endif
 #ifndef INCLUDED_luxe_Physics
 #include <luxe/Physics.h>
@@ -708,6 +714,9 @@
 #ifndef INCLUDED_luxe_debug_DebugView
 #include <luxe/debug/DebugView.h>
 #endif
+#ifndef INCLUDED_luxe_components_sprite_SpriteAnimation
+#include <luxe/components/sprite/SpriteAnimation.h>
+#endif
 #ifndef INCLUDED_luxe_components_Components
 #include <luxe/components/Components.h>
 #endif
@@ -737,6 +746,9 @@
 #endif
 #ifndef INCLUDED_luxe_PhysicsEngine
 #include <luxe/PhysicsEngine.h>
+#endif
+#ifndef INCLUDED_luxe_ParcelProgress
+#include <luxe/ParcelProgress.h>
 #endif
 #ifndef INCLUDED_luxe_Parcel
 #include <luxe/Parcel.h>
@@ -925,6 +937,7 @@ hx::RegisterResources( hx::GetResources() );
 ::phoenix::ProjectionType_obj::__register();
 ::luxe::utils::unifill::Exception_obj::__register();
 ::luxe::structural::BalancedBSTTraverseMethod_obj::__register();
+::luxe::components::sprite::SpriteAnimationType_obj::__register();
 ::luxe::DebugError_obj::__register();
 ::luxe::_Log::LogError_obj::__register();
 ::luxe::InputEventType_obj::__register();
@@ -986,6 +999,7 @@ hx::RegisterResources( hx::GetResources() );
 ::luxe::structural::_BalancedBST::NodeColor_obj::__register();
 ::luxe::macros::BuildVersion_obj::__register();
 ::luxe::debug::ProfilerDebugView_obj::__register();
+::luxe::components::sprite::SpriteAnimationData_obj::__register();
 ::luxe::Physics_obj::__register();
 ::luxe::Log_obj::__register();
 ::luxe::Tag_obj::__register();
@@ -1152,6 +1166,7 @@ hx::RegisterResources( hx::GetResources() );
 ::phoenix::Color_obj::__register();
 ::luxe::debug::Inspector_obj::__register();
 ::luxe::debug::DebugView_obj::__register();
+::luxe::components::sprite::SpriteAnimation_obj::__register();
 ::luxe::components::Components_obj::__register();
 ::luxe::Timer_obj::__register();
 ::luxe::Text_obj::__register();
@@ -1162,6 +1177,7 @@ hx::RegisterResources( hx::GetResources() );
 ::luxe::ResourceStats_obj::__register();
 ::luxe::Resources_obj::__register();
 ::luxe::PhysicsEngine_obj::__register();
+::luxe::ParcelProgress_obj::__register();
 ::luxe::Parcel_obj::__register();
 ::luxe::NineSlice_obj::__register();
 ::luxe::Visual_obj::__register();
@@ -1228,6 +1244,7 @@ hx::RegisterResources( hx::GetResources() );
 ::phoenix::ProjectionType_obj::__boot();
 ::luxe::utils::unifill::Exception_obj::__boot();
 ::luxe::structural::BalancedBSTTraverseMethod_obj::__boot();
+::luxe::components::sprite::SpriteAnimationType_obj::__boot();
 ::luxe::DebugError_obj::__boot();
 ::luxe::_Log::LogError_obj::__boot();
 ::luxe::InputEventType_obj::__boot();
@@ -1251,6 +1268,7 @@ hx::RegisterResources( hx::GetResources() );
 ::luxe::Tag_obj::__boot();
 ::luxe::Log_obj::__boot();
 ::luxe::Physics_obj::__boot();
+::luxe::components::sprite::SpriteAnimationData_obj::__boot();
 ::luxe::debug::ProfilerDebugView_obj::__boot();
 ::luxe::macros::BuildVersion_obj::__boot();
 ::luxe::structural::_BalancedBST::NodeColor_obj::__boot();

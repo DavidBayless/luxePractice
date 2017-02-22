@@ -9,13 +9,19 @@
 #include <luxe/Game.h>
 #endif
 HX_DECLARE_CLASS0(Main)
+HX_DECLARE_CLASS1(luxe,Component)
 HX_DECLARE_CLASS1(luxe,Emitter)
 HX_DECLARE_CLASS1(luxe,Entity)
 HX_DECLARE_CLASS1(luxe,Game)
+HX_DECLARE_CLASS1(luxe,ID)
 HX_DECLARE_CLASS1(luxe,KeyEvent)
 HX_DECLARE_CLASS1(luxe,Objects)
+HX_DECLARE_CLASS1(luxe,Parcel)
 HX_DECLARE_CLASS1(luxe,Sprite)
 HX_DECLARE_CLASS1(luxe,Visual)
+HX_DECLARE_CLASS3(luxe,components,sprite,SpriteAnimation)
+HX_DECLARE_CLASS2(luxe,resource,Resource)
+HX_DECLARE_CLASS1(phoenix,Texture)
 
 
 class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::luxe::Game_obj{
@@ -42,11 +48,27 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::luxe::Game_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Main","\x59","\x64","\x2f","\x33"); }
 
+		::luxe::components::sprite::SpriteAnimation anim;
+		::phoenix::Texture image;
 		::luxe::Sprite player;
+		Float max_left;
+		Float max_right;
 		Float move_speed;
 		virtual Dynamic config( Dynamic config);
 
 		virtual Void ready( );
+
+		virtual Void assets_loaded( ::luxe::Parcel _);
+		Dynamic assets_loaded_dyn();
+
+		virtual Void create_apartment( );
+		Dynamic create_apartment_dyn();
+
+		virtual Void create_player( );
+		Dynamic create_player_dyn();
+
+		virtual Void create_player_animation( );
+		Dynamic create_player_animation_dyn();
 
 		virtual Void connect_input( );
 		Dynamic connect_input_dyn();
